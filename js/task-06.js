@@ -1,9 +1,13 @@
 const input = document.querySelector('input');
 
 input.addEventListener('blur', (event) => {
-    const enterLength = event.currentTarget.value.length;
-    const eventLength = input.dataset.length;
-    if(enterLength < eventLength || enterLength > eventLength) {
+    const userValue = event.currentTarget.value.length;
+    const eventLength = Number(input.dataset.length);
+    console.log(eventLength)
+    if(eventLength !== userValue) {
         input.classList.add('invalid');
-    } else input.classList.add('valid');
-})
+    } else {
+        input.classList.add('valid');
+        input.classList.remove('invalid');
+    }
+});
