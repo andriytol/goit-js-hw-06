@@ -4,4 +4,4 @@ const span = document.querySelector('#name-output');
 input.addEventListener('input', (event) => {
     span.textContent = event.currentTarget.value;
     if(span.textContent === '') span.textContent = 'Anonymous';
-})
+});
